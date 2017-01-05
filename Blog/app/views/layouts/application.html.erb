@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+	<%= csrf_meta_tags %>
+	<link href='https://fonts.googleapis.com/css?family=Lato:100italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+	<%= stylesheet_link_tag 'application', media: 'all',
+	'data-turbolinks-track': 'reload' %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+	  <%= render 'layouts/header' %>
+		  <%= yield %>
+	  <%= render 'layouts/footer' %>
+</body>
+</html>

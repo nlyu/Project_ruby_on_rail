@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<div class="intro" style="margin-top: 8%; font-size: 2vw; margin-bottom: 2%;">
+<p>Users</p>
+<p style="font-size: 1.5vw;">海内存知己,天涯若比邻</p>
+</div>
+    <% @users.each do |user| %>
+    <div class="postlist">
+      <div style="font-size: 6vw; text-align: center;color:black; background-color: white; margin-bottom: -1.5%;">
+        <p><%= user.name %></p>
+      </div>
+      <div style="color:white; background-color: black; padding-top: 1%; ">
+        <p><%= user.email %></p>
+        <p><%= link_to 'Show', user %>&nbsp;<% if current_user != nil && current_user.id == user.id%><%= link_to 'Edit', edit_user_path(user) %><% end %>&nbsp;<% if (current_user != nil && current_user.admin==true) || (current_user != nil && current_user.id == user.id)%>
+          <%= link_to "delete", user, method: :delete,
+          data: { confirm: "You sure?" } %>
+        <% end %></p>
+      </div>
+    </div>
+    <% end %>

@@ -1,0 +1,240 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+/*nav bar*/
+* {
+	font-family: Lato;
+    font-weight: 900;
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	height: 100%;
+    scroll-behavior: smooth;
+	background-size: cover;
+	background-attachment: fixed;
+	background-image: url(shanghai1.jpg); 
+}
+
+.nav-bar li{
+	color: white;
+	font-weight: 900;
+	font-size: 3.0vh;
+}
+
+
+/*for header*/
+
+.intro {
+	margin: 0 auto;
+	margin-top: 13%;
+}
+.intro p{
+	font-family: Lato;
+	font-weight: 500;
+	color: white;
+	font-size: 5vw;
+	text-align: center;
+}
+.intro a{
+	font-size: 3vw;
+	color:yellow;
+}
+
+
+.home_log_in{
+	margin-left: 17%;
+	margin-top: 10%;
+}
+
+.home_log_in p{
+	font-family: Lato;
+	font-weight: 900;
+	color: white;
+	font-size: 4.5em;
+
+	margin-bottom: 0.5%;
+}
+
+
+/*for footer*/
+.footer {
+	height: 6%;
+	opacity: 0.7;
+	bottom: 0px;
+	position: fixed;
+	width: 100%;
+	background-color: black;
+}
+
+
+/*main head*/
+.bloghead{
+	width: 40%;
+	height: 28%;
+	margin-left: 2%;
+	margin-top: 10%;
+	position: fixed;
+	text-align: center;
+}
+
+.bloghead p{
+	color: white;
+	font-size: 10vh;
+	font-weight: 100;
+}
+
+
+.bloghead2{
+	background-color: black;
+	width: 26%;
+	opacity: 0.7;
+	margin-left: 7%;
+	margin-top: 32%;
+	position: fixed;
+}
+
+.bloghead2 p, .bloghead2 a{
+	text-align: center;
+	font-weight: 500;
+	color: yellow;
+	font-size: 9vh;
+}
+
+.allpost{
+	margin-top: 6%;
+	width: 55%;
+	right: 3%;
+	position: absolute;
+}
+
+.allpost{
+	background-color: black;
+	opacity: 0.8;
+}
+
+.allpost p{
+	color: white;
+}
+
+.posts{
+	padding-left: 0;
+}
+
+.postlist{
+	opacity: 0.8;
+	width: 55%;
+	margin: 0 auto;
+	margin-bottom: 7%;
+	text-align: center;
+	font-size: 2vw;
+}
+
+
+.listbody {
+	text-align: center;;
+	margin-top: 5%;
+}
+
+.editform{
+	padding-top: 2%;
+	padding-bottom: 2%;
+	width: 30%;
+	margin: 0 auto;
+	opacity: 0.8;
+	text-align: center;
+	margin-top: 2%;
+	margin-bottom: 20%;
+	background-color: black;
+	border-style: solid none solid none;
+	border-color: white;
+	border-width: 14px;
+}
+
+.editform label {
+	font-weight: 900;
+	font-size: 3vw;
+	color: white;
+}
+.editform input {
+	border-style: none none solid none;
+	border-color: white;
+	background: none;
+	opacity: 0.9;
+	font-size: 2vw;
+	margin-bottom: 1%;	
+}
+
+.editform .btn{
+	background-color: white;
+	color:black;
+	font-weight: 900;
+}
+
+.newblog{
+	width: 50%;
+	margin: 0 auto;
+	background-color: white;
+	opacity: 0.8;
+	text-align: center;
+	margin-bottom: 10%;
+
+}
+
+.newblog input{
+	border-style: none none none none;
+	width: 100%;
+}
+
+.newblog textarea{
+	border-style: none none none none;
+	background-color: black;
+	font-size: 2vw;
+	color: white;
+	width: 100%;
+	height: 30%;
+}
+.newblog label{
+	font-size: 3vw;
+	font-weight: 1200;
+	color: black;
+}
+
+.newblog .btn{
+	background-color: white;
+	font-size: 2vw;
+	color:black;
+	width: 100%;
+	font-weight: 900;
+}
+
+.footer {
+	height: 6%;
+	opacity: 0.6;
+	bottom: 0px;
+	position: fixed;
+	width: 100%;
+	background-color: black;
+	text-align: center;
+}
+
+.footer p{
+	margin-top: 0.5%;
+	color: #d8d8d8;
+	font-weight: 900;
+	font-size: 2.0em;
+}
+

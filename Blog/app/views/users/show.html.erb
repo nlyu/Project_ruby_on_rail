@@ -1,0 +1,29 @@
+<% provide(:title, @user.name) %>
+	<div class="bloghead">
+		<p>
+		  <%= @user.name %>
+		</p>
+		<p style="font-size: 3vh; font-weight: 900; margin-top: -5%; margin-left: 30%;">
+		  <%= @user.email %>
+		</p>
+		<p style="font-size: 2.5vh; font-weight: 100; margin-top: 5%;">
+			但行好事，莫问前程
+		</p>
+	</div>
+	<div class="bloghead2">
+		<p><%= link_to 'New Post', new_post_path %></p>
+		<p>Posts (<%= @user.posts.count %>)</p>
+	</div>
+	<div class = "allpost">
+		<% if @user.posts.any? %>
+				<ol class="posts">
+				<%= render @posts %>
+				</ol>
+				<%= will_paginate @posts %>
+				<% else %>
+	</div>
+	<div style="font-size: 3.8vw; right: 10%; margin-top: 20%; position: absolute; color: white;">
+				<p>You dont have any Post<p>
+				<p>Any new IDEA for today?</p>
+	</div>
+	<% end %>

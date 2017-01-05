@@ -1,0 +1,8 @@
+<div class="intro" style="margin-top: 8%;">
+	<p>Edit your post</p>
+	<p><%= link_to 'Back', posts_path %></p>
+</div>
+<%= render 'form', post: @post %>
+
+<%= link_to 'Show', @post %> | 
+<%= link_to 'Back to post', posts_path %>

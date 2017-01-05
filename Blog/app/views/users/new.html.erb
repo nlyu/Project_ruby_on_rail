@@ -1,0 +1,35 @@
+<% provide(:title, 'Sign up') %>
+<% if logged_in? %>
+  <div class="home_log_in">
+    <p style="font-size: 14vh; font-weight: 200;">Welcome</p>
+    <p >&rArr;You have logged in</p>
+    <p style="font-weight: 700;">Any new <span style="font-size: 14vh; font-weight: 200;">Idea</span> for <span style="font-size: 14vh; font-weight: 200;">Today?</span></p>>
+  </div>
+<% else %>
+<div class="intro" style="margin-top: 7%;">
+  <p>Sign up</p>
+  <p style="font-size: 1.4vw; font-weight: 100;">若知四海皆兄弟，何处相逢非故人</p>
+</div>
+<div class="editform">
+    <%= form_for(@user) do |f| %>
+    <div>
+    <%= render 'shared/error_messages' %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name%>
+    </div>
+    <div>
+    <%= f.label :email %><br>
+    <%= f.email_field :email%>
+    </div>
+    <div>
+    <%= f.label :password %><br>
+    <%= f.password_field :password%>
+    </div>
+    <div style="margin-bottom: 15%;">
+    <%= f.label :password_confirmation, "Confirmation" %><br>
+    <%= f.password_field :password_confirmation%>
+    </div>
+    <%= f.submit "Create your account", class: "btn btn-primary" %>
+  <% end %>
+</div>
+<% end %>

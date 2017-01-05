@@ -1,0 +1,18 @@
+
+<p id="notice"><%= notice %></p>
+<div class="intro" style="margin-top: 8%; margin-bottom: 5%; font-size: 1.7vw;">
+<p>Posts</p>
+</div>
+<div class="postlist">
+  <div style="font-size: 6vw; text-align: center;color:black; background-color: white; margin-bottom: -1.5%;">
+    <p><%= @post.title %></p>
+  </div>
+  <div style="color:white; background-color: black; padding-top: 1%; ">
+    <br>
+    <p><%= @post.content %></p>
+    <br>
+    <br>
+    <p><%= @post.created_at %>&nbsp;<%= @post.updated_at %></p>
+    <p style="background-color: white; color:black;margin-bottom: 20%;"><%= link_to 'Back', posts_path %></p>
+  </div>
+</div>

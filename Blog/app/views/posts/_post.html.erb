@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+  <div class='listbody'>
+    <div style="background-color: white; width: 50%; height:2px; display: inline-block;">
+    </div>
+      <div style="font-size: 2vw; margin-top: 2.7%; text-align: center;">
+        <p style="font-size: 3.5vw; font-weight: 900;"><%= post.title %></p>
+      </div>
+      <div style="margin-bottom: 5%;">
+        <p style="font-size: 2vw; font-weight: 700;"><%= post.content %></p>
+        <p><%= post.updated_at %></p>
+        <p style="font-size: 1.5vw;">
+          <% if current_user != nil && current_user.id == @user.id%>
+          <%= link_to 'Showpost', post %>      
+          <%= link_to 'Editpost', edit_post_path(post) %>        
+          <%= link_to 'Destroypost', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %> 
+        </p>
+        <div style="background-color: white; width: 50%; height:2px; display: inline-block;">
+        </div>
+      </div>
+  </div>
+<br>

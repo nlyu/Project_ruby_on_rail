@@ -1,0 +1,16 @@
+
+<% provide(:title, "Log in") %>
+<div class="intro" style="margin-top: 7%;">
+	<p>Log in</p>
+	<p>New user? <%= link_to "Sign up now!", new_user_path %></p>
+</div>
+<div class="editform">
+		<%= form_for(:session, url: login_path) do |f| %>
+		<%= f.label :email %>
+		<%= f.email_field :email%>
+		<%= f.label :password %>
+		<%= f.password_field :password%>
+		<p>&nbsp;</p>
+		<%= f.submit "Log in", class: "btn btn-primary" %>
+		<% end %>
+</div>
