@@ -1,6 +1,6 @@
 <div class="intro" style="margin-top: 8%;">
 	<p>Edit your post</p>
-	<p><%= link_to 'Back', posts_path %></p>
+	<p><%= link_to 'Back', current_user %></p>
 </div>
 <%= render 'form', post: @post %>
 

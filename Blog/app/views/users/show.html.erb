@@ -11,7 +11,11 @@
 		</p>
 	</div>
 	<div class="bloghead2">
-		<p><%= link_to 'New Post', new_post_path %></p>
+		<% if current_user != nil && current_user.id == @user.id%>
+			<p><%= link_to 'New Post', new_post_path %></p>
+		<% else %>
+			<p><%= link_to 'New Post', root_path %></p>
+		<% end %>
 		<p>Posts (<%= @user.posts.count %>)</p>
 	</div>
 	<div class = "allpost">
@@ -25,5 +29,5 @@
 	<div style="font-size: 3.8vw; right: 10%; margin-top: 20%; position: absolute; color: white;">
 				<p>You dont have any Post<p>
 				<p>Any new IDEA for today?</p>
-	</div>
 	<% end %>
+	</div>

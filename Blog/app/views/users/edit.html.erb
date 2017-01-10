@@ -1,6 +1,7 @@
 <% provide(:title, "Edit user") %>
 <div class="intro" style="margin-top: 7%;">
 	<p>Update your profile</p>
+	<p><%= link_to 'Back', current_user %></p>
 </div>
 <div class="editform">
 		<%= form_for(@user) do |f| %>
