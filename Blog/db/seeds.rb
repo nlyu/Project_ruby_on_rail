@@ -5,15 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.create!(name: "nlyu2",
+User.create!(name: "Nuochen Lyu",
 email: "lnc0519@gmail.com",
-password: "756251901",
-password_confirmation: "756251901",
+password: "00000000",
+password_confirmation: "00000000",
 admin: true)
-
-users = User.order(:created_at).take(1)
-50.times do
-title = "test"
-content = Faker::Lorem.sentence(5)
-users.each { |user| user.posts.create!(content: content) }
-end

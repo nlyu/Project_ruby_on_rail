@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<div class="intro" style="margin-top: 8%; margin-bottom: 7%; font-size: 1.7vw;">
+<p>Searching Center</p>
+<p ><%= link_to 'Back', 'posts#index' %></p>
+<p style="font-size: 2.4vw; font-weight: 900; color: yellow;">Searching for author: <%= @result %></p>
+</div>
+	<% counter = 0 %>
+	<% if @result == "" or @result == " " or @result == "  " or @result == "   " %>
+		<p style="color: yellow; text-align: center; margin-top: 8%; margin-bottom: 7%; font-size: 3.7vw;">Your search cannot be blank!</p>
+	<% else %>
+	    <% @posts.each do |post| %>
+	    	<% if post.author.include? @result %>
+	    		<% counter = counter+1 %>
+			    <div class="postlist">
+			      <div style="font-size: 6vw; text-align: center;color:black; background-color: white; margin-bottom: -1.5%;">
+			        <p><%= post.title %></p>
+			      </div>
+			      <div style="color:white; background-color: black; padding-top: 1%;">
+			        <p><%= post.content %></p>
+			        <p style="font-size: 1.8vw;">Author: <%= post.author %></p>
+			        <p><%= post.created_at %>&nbsp;<%= post.updated_at %></p>
+			        <p style="background-color: white; color:black;margin-bottom: 20%;"><%= link_to 'Showpost', post %></p>
+			      </div>
+			    </div>
+			<% end %>
+	    <% end %>
+	    <% if counter == 0 %>
+			<p style="color: yellow; text-align: center; margin-top: 8%; margin-bottom: 7%; font-size: 3.7vw;">Sorry, the author is not found :(</p>
+		<% end %>
+	<% end %>

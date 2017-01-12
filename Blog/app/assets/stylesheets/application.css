@@ -184,6 +184,30 @@ body{
 	font-weight: 900;
 }
 
+.searchtag {
+	position: fixed;
+	left: 0;
+	top: 20vh;
+}
+
+.searchtag form{
+	margin: 0 0 0 0;
+}
+
+.searchtag input{
+	border-style: none solid none none;
+	border-color: yellow;
+	border-width: 5px;
+	background-color: black;
+	opacity: 0.7;
+	width: 20vw;
+	height: 50px;
+	font-size: 1.5vw;
+	text-align: center;
+	color: yellow;
+}
+
+
 .newblog{
 	width: 50%;
 	margin: 0 auto;
@@ -221,6 +245,13 @@ body{
 	font-weight: 900;
 }
 
+.about p{
+	margin-left: 10%;
+	margin-right: 10%;
+	font-size: 3vh;
+	margin-bottom: 3%;
+}
+
 .footer {
 	height: 6%;
 	opacity: 0.6;
@@ -232,9 +263,9 @@ body{
 }
 
 .footer p{
-	margin-top: 0.5%;
+	margin-top: 1.0%;
 	color: #d8d8d8;
 	font-weight: 900;
-	font-size: 2.0em;
+	font-size: 1.8em;
 }
 

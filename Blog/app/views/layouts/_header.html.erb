@@ -4,11 +4,11 @@
 	<nav>
 	<ul class="nav navbar-nav navbar-right" style="margin-top:4.5px; margin-right: 10px;">
 		<li><a href="http://www.lyulyulyu.com">LyuLyuLyu.com</a></li>
-		<li><%= link_to "About", '#' %></li>
-		<li><%= link_to "All Blogs", posts_path %></li>
+		<li><%= link_to "About", 'about' %></li>
+		<li><%= link_to "Explore", posts_path %></li>
 		<li><%= link_to "Users", users_path %></li>
 		<% if logged_in? %>
-			<li><%= link_to "Your Blog", current_user %></li>
+			<li><%= link_to "Your Profile", current_user %></li>
 			<li class="dropdown">
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 			Account <b class="caret"></b>
@@ -21,7 +21,7 @@
 			</ul>
 		</li>
 	<% else %>
-		<li><%= link_to "Log in", login_path %></li>
+		<li><%= link_to "Log in", login_path%></li>
 	<% end %>
 	</ul>
 	</nav>

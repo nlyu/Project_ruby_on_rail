@@ -7,6 +7,15 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def search
+    @posts = Post.all
+    @result = params[:q];
+  end
+
+  def searchtitle
+    @posts = Post.all
+    @result = params[:q];
+  end
   # GET /posts/1
   # GET /posts/1.json
   def show
@@ -26,6 +35,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
+    @post.author = current_user.name
     respond_to do |format|
       if @post.save
         format.html { redirect_to '/success', notice: 'Post was successfully created.' }

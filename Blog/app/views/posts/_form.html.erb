@@ -29,7 +29,9 @@
       </div>
       <div>
       <p>your id is <%= current_user.id %></p>
-     
+     <div>
+      <p>your id is <%= current_user.name %></p>
+      </div>
       title<%= post.title %>
       <% post.user_id = current_user.id %>
        post id is<%= post.user_id %>

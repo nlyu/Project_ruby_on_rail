@@ -12,6 +12,7 @@
     <p><%= @post.content %></p>
     <br>
     <br>
+    <p style="font-size: 1.8vw;">Author: <%= @post.author %></p>
     <p><%= @post.created_at %>&nbsp;<%= @post.updated_at %></p>
     <p style="background-color: white; color:black;margin-bottom: 20%;"><%= link_to 'Back', posts_path %></p>
   </div>
