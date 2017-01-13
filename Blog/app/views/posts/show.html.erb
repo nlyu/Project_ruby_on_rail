@@ -9,7 +9,9 @@
   </div>
   <div style="color:white; background-color: black; padding-top: 1%; ">
     <br>
-    <p><%= @post.content %></p>
+      <div style="text-align: left; margin-left: 3%; margin-right: 3%; font-size: 24px; margin-bottom: 6%; margin-top: 6%;">
+            <p><%= simple_format post.content %></p>
+      </div>
     <br>
     <br>
     <p style="font-size: 1.8vw;">Author: <%= @post.author %></p>

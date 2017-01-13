@@ -25,10 +25,12 @@
     <% @posts.each do |post| %>
     <div class="postlist">
       <div style="font-size: 6vw; text-align: center;color:black; background-color: white; margin-bottom: -1.5%;">
-        <p><%= post.title %></p>
+        <p><%= simple_format post.title %></p>
       </div>
-      <div style="color:white; background-color: black; padding-top: 1%;">
-        <p><%= post.content %></p>
+      <div style="color:white; background-color: black; padding-top: 1%;text-align: center;">
+        <div style="text-align: left; margin-left: 3%; margin-right: 3%; font-size: 24px; margin-bottom: 6%; margin-top: 6%;">
+            <p><%= simple_format post.content %></p>
+        </div>
         <p style="font-size: 1.8vw;">Author: <%= post.author %></p>
         <p><%= post.created_at %>&nbsp;<%= post.updated_at %></p>
         <p style="background-color: white; color:black;margin-bottom: 20%;"><%= link_to 'Showpost', post %></p>
