@@ -2,7 +2,7 @@
 
 The project is now launched, below is the URL
 http://lyulyulyu.herokuapp.com/
-上面是这个博客系统的网站
+这个是这个博客系统的网站入口
 
 Hi, this is a project for ruby on rails. So basically i made a blog using ruby on rails.
 This blog contains several funtions listed below:
